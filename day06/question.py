@@ -1,4 +1,3 @@
-'''
 a = 10
 b = 20
 print(f'{a} + {b} = {a+b}')
@@ -44,7 +43,7 @@ with open('day06\question.txt', 'w') as f:
 
 a = int(input('정수 입력  : '))
 try :
-    print(a/10)
+    print(10/a)
 except ZeroDivisionError :
     print('0으로 나눌 수 없습니다.')
 
@@ -77,7 +76,7 @@ for i in numbers :
     if i not in num:
         num.append(i)
 print(num)
-'''
+
 txt = "Hello Python"
 result = txt.swapcase()
 print(result)
@@ -85,7 +84,7 @@ print(result)
 for x in range(1,101):
     if x % 3 == 0 and x % 5 != 0:
         print(x, end= ' ')
-
+print()
 def get_odd_numbers(a):
     b = []
     for x in a:
