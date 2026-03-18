@@ -40,6 +40,7 @@ Python 기초, Git, 데이터 분석 관련 내용을 공부하고 있습니다.
 | Day9 | 선형대수, 통계, 확률 |
 | Day10 | 데이터 전처리 & 시각화 기초 |
 | Day11 | 머신러닝 입문 (LinearRegression, 모델 학습/예측) |
+| Day12 | 상권 및 매출 데이터 분석 (pandas, groupby, 데이터 구조 이해) |
 ---
 
 ## Repository Structure
@@ -56,6 +57,7 @@ Python-practice
 ├ day09 (Math)
 ├ day10 (Preprocessing & Visualization)
 ├ day11 (Machine Learning)
+├ day12 (Data Analysis)
 └ README.md
 ```
 
