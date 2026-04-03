@@ -1,6 +1,6 @@
-# Python-to-ML
+# Python-to-AI
 
-Python 기초부터 머신러닝, 딥러닝까지 학습 과정을 기록하는 저장소입니다.  
+Python 기초부터 머신러닝, 딥러닝, AI 프로젝트까지 학습 과정을 기록하는 저장소입니다.  
 AI Human 교육 과정을 기반으로, 매일 학습한 내용과 복습 코드, 실습 내용을 정리하고 있습니다.
 
 ---
@@ -8,7 +8,7 @@ AI Human 교육 과정을 기반으로, 매일 학습한 내용과 복습 코드
 ## 📌 About
 
 이 저장소는 단순 코드 저장이 아니라  
-**학습 흐름 (Python → ML → DL)** 을 기록하는 것을 목표로 합니다.
+**학습 흐름 (Python → ML → DL → AI)** 을 기록하는 것을 목표로 합니다.
 
 - 직접 작성한 코드 중심
 - 복습 기반 학습 기록
@@ -50,20 +50,62 @@ AI Human 교육 과정을 기반으로, 매일 학습한 내용과 복습 코드
 | Day16 | TensorFlow와 MLP 기초 학습 |
 | Day17 | 딥러닝 개념과 CNN 기초 학습 |
 | Day18 | 이미지 데이터 이해와 PyTorch 파이프라인 구현 |
+| Day19 | 순차 데이터와 RNN 기초 / 온도 예측 앙상블 실험 |
 
 ---
 
 ## 🔥 Recent
 
-### Day18
-- 이미지 데이터의 기본 구조 학습
-- 픽셀, RGB 채널, 흑백 이미지 개념 정리
-- 전통적인 이미지 처리 기법과 딥러닝 기반 이미지 처리 예시 학습
-- PyTorch `Dataset`, `DataLoader` 직접 구현
-- CNN 모델을 PyTorch로 직접 구성하고 학습 루프 작성
-- `train / validation` 구조를 나누어 검증 정확도 확인
-- `tqdm`을 활용한 진행도 출력 및 best model 저장 실습
-- GPU 환경 구성 시도 및 로컬 환경 이슈 확인
+### Day19
+- 순차 데이터의 개념과 특징 정리
+- 시계열 데이터와 자연어 데이터의 차이 학습
+- RNN이 필요한 이유와 Hidden State 개념 이해
+- Vanilla RNN(SimpleRNN) 구조 정리
+- Many-to-One / Many-to-Many / Encoder-Decoder 구조 구분
+- `return_sequences`, `return_state`, `initial_state` 흐름 정리
+- 순차 데이터 기반 온도 예측 아이디어 실험
+- 대표 온도 예측 + Y18 직접 예측을 결합한 앙상블 코드 정리
+
+---
+
+## 📂 Structure
+
+```text
+Python-to-AI/
+├── day02/
+├── day03/
+├── day04/
+├── day05/
+├── day06/
+├── day07/
+├── day08_numpy/
+├── day09_linear_algebra_statistics_probability/
+├── day10_practice/
+├── day11_ml/
+├── day12/
+├── day13_ml/
+├── day14_ml/
+├── day15_dl/
+├── day16_dl/
+├── day17_dl_cnn/
+├── day18_pytorch/
+├── day19_rnn/
+└── README.md
+```
+
+---
+
+## 🔥 Recent
+
+### Day19
+- 순차 데이터의 개념과 특징 정리
+- 시계열 데이터와 자연어 데이터의 차이 학습
+- RNN이 필요한 이유와 Hidden State 개념 이해
+- Vanilla RNN(SimpleRNN) 구조 정리
+- Many-to-One / Many-to-Many / Encoder-Decoder 구조 구분
+- `return_sequences`, `return_state`, `initial_state` 흐름 정리
+- 순차 데이터 기반 온도 예측 아이디어 실험
+- 대표 온도 예측 + Y18 직접 예측을 결합한 앙상블 코드 정리
 
 ---
 
@@ -88,6 +130,7 @@ Python-to-ML/
 ├── day16_dl/
 ├── day17_dl_cnn/
 ├── day18_pytorch/
+├── day19_rnn/
 └── README.md
 ```
 
