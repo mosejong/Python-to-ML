@@ -51,20 +51,7 @@ AI Human 교육 과정을 기반으로, 매일 학습한 내용과 복습 코드
 | Day17 | 딥러닝 개념과 CNN 기초 학습 |
 | Day18 | 이미지 데이터 이해와 PyTorch 파이프라인 구현 |
 | Day19 | 순차 데이터와 RNN 기초 / 온도 예측 앙상블 실험 |
-
----
-
-## 🔥 Recent
-
-### Day19
-- 순차 데이터의 개념과 특징 정리
-- 시계열 데이터와 자연어 데이터의 차이 학습
-- RNN이 필요한 이유와 Hidden State 개념 이해
-- Vanilla RNN(SimpleRNN) 구조 정리
-- Many-to-One / Many-to-Many / Encoder-Decoder 구조 구분
-- `return_sequences`, `return_state`, `initial_state` 흐름 정리
-- 순차 데이터 기반 온도 예측 아이디어 실험
-- 대표 온도 예측 + Y18 직접 예측을 결합한 앙상블 코드 정리
+| Day20 | OpenAPI 기초, 공공데이터 API 호출, 페이지네이션, 지도 시각화(folium) |
 
 ---
 
@@ -90,49 +77,20 @@ Python-to-AI/
 ├── day17_dl_cnn/
 ├── day18_pytorch/
 ├── day19_rnn/
+├── day20_api/
 └── README.md
 ```
 
 ---
 
-## 🔥 Recent
+## 🔥 Recent Update
 
-### Day19
-- 순차 데이터의 개념과 특징 정리
-- 시계열 데이터와 자연어 데이터의 차이 학습
-- RNN이 필요한 이유와 Hidden State 개념 이해
-- Vanilla RNN(SimpleRNN) 구조 정리
-- Many-to-One / Many-to-Many / Encoder-Decoder 구조 구분
-- `return_sequences`, `return_state`, `initial_state` 흐름 정리
-- 순차 데이터 기반 온도 예측 아이디어 실험
-- 대표 온도 예측 + Y18 직접 예측을 결합한 앙상블 코드 정리
-
----
-
-## 📂 Structure
-
-```text
-Python-to-ML/
-├── day02/
-├── day03/
-├── day04/
-├── day05/
-├── day06/
-├── day07/
-├── day08_numpy/
-├── day09_linear_algebra_statistics_probability/
-├── day10_practice/
-├── day11_ml/
-├── day12/
-├── day13_ml/
-├── day14_ml/
-├── day15_dl/
-├── day16_dl/
-├── day17_dl_cnn/
-├── day18_pytorch/
-├── day19_rnn/
-└── README.md
-```
+### day20_api
+공공데이터포털 OpenAPI를 활용한 버스 위치 데이터 수집 실습을 진행했습니다.  
+함평군 데이터를 대상으로 페이지네이션을 처리하여 전체 데이터를 수집하고,  
+pandas DataFrame으로 정리한 뒤 folium을 사용해 지도 시각화를 수행했습니다.  
+실습 과정에서 `(0, 0)` 좌표 이상치를 발견하고 제거하며,  
+API 호출부터 데이터 정제, 시각화까지의 흐름을 직접 경험했습니다.
 
 ---
 
