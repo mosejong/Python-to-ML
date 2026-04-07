@@ -1,0 +1,72 @@
+## 📅 2026-03-26
+
+### 🧠 Today I Learned
+
+#### 1. Decision Tree 개념
+
+* 데이터를 반복적으로 분할하여 예측을 수행하는 모델 (스무고개 방식)
+* 회귀 → RSS(오차 제곱합) 최소화
+* 분류 → 불순도 최소화 (지니지수, 엔트로피)
+* 트리가 깊어질수록 과적합이 발생할 수 있음
+
+#### 2. 앙상블 기법 (Ensemble)
+
+* 여러 모델을 결합하여 성능을 향상시키는 방법
+* 과적합을 줄이고 일반화 성능을 높이기 위해 사용
+
+#### 3. Bagging
+
+* Bootstrap(복원추출)을 통해 다양한 데이터셋 생성
+* 여러 모델을 병렬로 학습 후 결과를 결합
+* 분산 감소 → 과적합 방지 효과
+
+#### 4. Random Forest
+
+* Bagging 기반 모델
+* 각 트리에서 일부 feature를 랜덤하게 선택
+* 단일 Decision Tree보다 안정적인 성능 제공
+
+#### 5. Boosting
+
+* 이전 모델이 틀린 데이터에 집중하여 순차적으로 학습
+* 성능을 점진적으로 개선하는 방식
+
+#### 6. 추가 개념
+
+- Voting: 여러 모델의 예측을 결합 (Hard/Soft Voting)
+- Bootstrap: 복원추출을 통해 데이터 샘플 생성 (Bagging의 핵심)
+- Boosting 계열 모델: AdaBoost, Gradient Boosting, XGBoost, LGBM, CatBoost
+
+#### 7. AutoML
+- 모델 선택, 학습, 평가 과정을 자동화하는 기법
+- 다양한 모델을 빠르게 비교하여 최적의 모델을 찾을 수 있음
+- 대표 도구
+  - LazyPredict: 여러 모델을 한 번에 비교
+  - Scikit-Optimize: 하이퍼파라미터 자동 튜닝
+
+---
+
+### 💡 Insight
+
+* Decision Tree는 직관적이지만 과적합이 쉽게 발생한다는 한계를 가짐
+* Bagging과 Random Forest를 통해 모델의 안정성을 확보할 수 있음
+* Boosting은 단순 반복 학습이 아니라 “오답 보완”이라는 점이 핵심
+* 쉬운 데이터셋(iris)의 경우 모델 간 성능 차이가 크게 나타나지 않을 수 있음
+* AutoML을 활용하면 다양한 모델을 빠르게 비교할 수 있어 초기 모델 선택에 유용함
+
+---
+
+### ⚠️ Trouble Shooting
+
+* Bagging과 Random Forest의 개념이 혼동됨
+  → Random Forest는 Bagging 기반 + feature 랜덤 선택이라는 점으로 구분
+* Bagging의 목적과 Decision Tree의 분할 기준 개념이 혼동됨
+  → Bagging은 “분산 감소”, Tree는 “분할 기준 최적화”로 구분
+
+---
+
+### 🚀 Action Plan
+
+* Bagging vs Random Forest vs Boosting 차이 명확히 정리하기
+* 다양한 데이터셋으로 모델 성능 비교 실습 진행
+* 다음 주 딥러닝 학습을 대비하여 기본 개념 미리 확인

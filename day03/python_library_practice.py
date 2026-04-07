@@ -23,7 +23,7 @@ a = []
 
 while len(a) < 6:
     r = random.randint(1,45)
-    if r not in a:
+    if r not in a :
         a.append(r)
 
 print(a)
