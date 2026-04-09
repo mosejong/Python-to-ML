@@ -64,6 +64,7 @@ AI Human 교육 과정을 기반으로, 매일 학습한 내용과 복습 코드
 | Day20 | OpenAPI 기초, 공공데이터 API 호출, 페이지네이션, 지도 시각화(folium) |
 | Day21 | NLP 기초 / 텍스트 전처리 / 챗봇 프로젝트 |
 | Day22 | NLP 심화 / Naive Bayes 감정 분석 / 문장 및 문서 유사도(Cosine Similarity) |
+| Day23 | NLP 심화: Seq2Seq + Attention 번역 모델 구현 및 성능 최적화 |
 
 ---
 
@@ -92,6 +93,7 @@ Python-to-AI/
 ├── day20_api/
 ├── day21_chatbot/
 ├── day22_nlp_advance/
+├── day23_attention_nmt/
 └── README.md
 ```
 
@@ -99,12 +101,26 @@ Python-to-AI/
 
 ## 🔥 Recent Update
 
-### Day 22: NLP Advance & Similarity Analysis
+### Day 23: NLP Deep-Dive (Embedding to Attention Mechanism)
 
-어제의 전처리에 이어, 본격적으로 텍스트 데이터를 수치화하고 분석하는 기법을 학습했습니다.
-- **Naive Bayes**: 확률 기반 감정 분류 모델을 직접 구현하고, 스무딩(Smoothing)과 로그 연산을 통해 예측 안정성을 확보했습니다.
-- **Similarity Analysis**: 문장을 벡터화한 후 코사인 유사도(Cosine Similarity)를 통해 문맥적 거리를 계산하는 실습을 진행했습니다.
-- **Trouble Shooting**: TensorFlow 가중치 로드 시 발생하는 NumPy 버전 충돌 이슈를 해결하며 개발 환경 호환성의 중요성을 체감했습니다.
+단순한 텍스트 처리를 넘어, 자연어 처리 모델의 발전 흐름과 데이터 수치화(Embedding), 그리고 최신 아키텍처의 핵심인 Attention 메커니즘을 심도 있게 학습했습니다.
+
+#### 🔹 텍스트 벡터화 및 임베딩 (Text Vectorization & Embedding)
+- **임베딩 기법의 진화**: 
+  - **BoW & TF-IDF**: 통계적 기법을 통해 문장 내 키워드 가중치를 산출하는 법을 학습.
+  - **Word2Vec & Fasttext**: 주변 맥락(Context) 기반의 추론 임베딩 이해. 특히 Fasttext의 자모 단위 분석을 통한 한국어 오타 대응 성능 확인.
+  - **Subword Tokenization**: BPE(Byte Pair Encoding) 등을 통해 미등록 단어(OOV) 문제를 해결하는 전략 파악.
+
+#### 🔹 Attention 메커니즘 ★ (Core Mechanism)
+- **발전 흐름**: 규칙 기반 → 통계 기반(HMM, CRF) → 딥러닝 기반(RNN/LSTM → Attention) 변천사 정리.
+- **Seq2Seq의 한계 극복**: 고정된 Context Vector의 정보 손실 문제를 해결하기 위해 디코더가 인코더의 특정 상태에 집중하게 만드는 Attention 구현.
+- **Query, Key, Value 원리**: 
+  - **Query**(요청)와 **Key**(핵심)를 내적(Dot-product)하여 **Attention Score** 산출.
+  - 스코어 기반으로 **Value**(내용)를 가중합(Weighted Sum)하여 최종 문맥 벡터를 생성하는 전 과정 실습.
+
+#### 🛠️ 실전 트러블슈팅 (Trouble Shooting)
+- **성능 최적화**: 대용량 데이터 전처리 시 파이썬 루프의 병목 현상을 해결하기 위해 `lookup_indices`를 적용, **전처리 속도를 7분에서 7초로 100배 개선**.
+- **환경 및 버전 대응**: `torchtext` 버전 파편화 이슈를 특수 토큰 수동 주입 로직으로 해결하며 개발 환경 호환성의 중요성 체감.
 
 ---
 
